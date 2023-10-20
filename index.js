@@ -1,11 +1,8 @@
-// function myFunction() {
-//     alert("You should take everything out of the oven, it's ready!\n Bon appétit :)");
-// }
 
 var splide = new Splide('.splide', {
-    type: 'loop',
-    perPage: 3,
-    focus: 'center',
+  type: 'loop',
+  perPage: 3,
+  focus: 'center',
 });
 
 splide.mount();
@@ -16,8 +13,8 @@ splide.mount();
 function findRecipe() {
 
   let favDrink = prompt("Please select the recipe category: \n\n1 -    CUPCAKE \n2 -   BREAKFAST \n3 -   CAKE");
-  var number=parseInt(favDrink)
-  switch(number) {
+  var number = parseInt(favDrink)
+  switch (number) {
     case 1:
       window.location.href = "cupcake.html";
       break;
@@ -32,6 +29,80 @@ function findRecipe() {
   }
 
 }
+
+// function startTimer(duration) {
+//   const timerElement = document.getElementById("timer");
+//   timerElement.textContent = "Timer: " + (duration / 1000);
+
+//   setTimeout(function () {
+//       timerElement.textContent = "Timer: 0 seconds";
+//       alert('Time is over!!!');
+//   }, duration);
+
+//   const intervalId = setInterval(function () {
+//       const remaining = duration - 1000;
+//       if (remaining < 0) {
+//           clearInterval(intervalId);
+//       } else {
+//           timerElement.textContent = "Timer: " + (remaining / 1000) ;
+//       }
+//       duration = remaining;
+//   }, 1000);
+// }
+function startTimerPrompt() {
+  const timeOption = prompt("Choose an option:\n1 - Seconds\n2 - Minutes");
+
+  if (timeOption === "1") {
+    const userSeconds = prompt("Enter the number of seconds:");
+
+    if (userSeconds !== null) {
+      const totalSeconds = parseInt(userSeconds);
+
+      if (!isNaN(totalSeconds) && totalSeconds > 0) {
+        const intervals = 2;
+
+        for (let i = 0; i < intervals; i++) {
+          setTimeout(function () {
+            alert(`Left: ${totalSeconds - i * (totalSeconds / intervals)} seconds`);
+          }, i * (totalSeconds / intervals) * 1000);
+        }
+
+        setTimeout(function () {
+          alert('Time is over!');
+        }, totalSeconds * 1000);
+      } else {
+        alert('The entered number of seconds is invalid.');
+      }
+    }
+  } else if (timeOption === "2") {
+    const userMinutes = prompt("Enter the number of minutes:");
+
+    if (userMinutes !== null) {
+      const totalMinutes = parseInt(userMinutes);
+
+      if (!isNaN(totalMinutes) && totalMinutes > 0) {
+        const totalSeconds = totalMinutes * 60;
+        const intervals = 2;
+
+        for (let i = 0; i < intervals; i++) {
+          setTimeout(function () {
+            alert(`Left: ${totalSeconds - i * (totalSeconds / intervals)} seconds`);
+          }, i * (totalSeconds / intervals) * 1000);
+        }
+
+        setTimeout(function () {
+          alert('Time is over!');
+        }, totalSeconds * 1000);
+      } else {
+        alert('The entered number of minutes is invalid.');
+      }
+    }
+  } else {
+    alert('Invalid option. Please choose 1 for seconds or 2 for minutes.');
+  }
+}
+
+
 
 function startTimer(duration) {
   const timerElement = document.getElementById("timer");
@@ -73,31 +144,6 @@ function startTimer1(duration) {
       duration = remaining;
   }, 1000);
 }
-
-
-
-
-
-
-
-
-
-function countSelected(selectObject) {
-  let numberSelected = 0;
-  for (let i = 0; i < selectObject.options.length; i++) {
-    if (selectObject.options[i].selected) {
-      numberSelected++;
-    }
-  }
-  return numberSelected;
-}
-
-const btn = document.getElementById("btn");
-
-btn.addEventListener("click", () => {
-  const musicTypes = document.selectForm.musicTypes;
-  console.log(`You have selected ${countSelected(musicTypes)} option(s).`);
-});
 
 
 
