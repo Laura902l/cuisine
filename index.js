@@ -8,6 +8,23 @@ var splide = new Splide('.splide', {
 splide.mount();
 
 
+  // Function to validate the form
+  function validateForm() {
+    // Get the values of email and password fields
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("pwd").value;
+
+    // Email and password validation
+    if (email === "") {
+      alert("Please enter your email.");
+    } else if (password.length < 6) {
+      alert("Your password should be at least 6 characters long.");
+    } else {
+      // The form is valid; you can proceed with submission or other actions.
+      // For demonstration purposes, we'll simply show an alert.
+      alert("Form submitted successfully.");
+    }
+  }
 
 
 function findRecipe() {
