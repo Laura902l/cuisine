@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="forms.css">
-  <link rel="icon" href="C:\Users\User\.vscode\web_tech11\bakery_img\favicon.ico">
+  <link rel="icon" href="C:\Users\hanal\.vscode\web_tech11\bakery_img\favicon.ico">
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -22,15 +22,12 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
-
-
   <!-- font -->
   <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet'
     type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
   <title>Form</title>
-
-
+  <script src="C:\Users\hanal\.vscode\web_tech11\ass\form.js"></script>
 
 </head>
 
@@ -41,7 +38,7 @@
     <div class="container-fluid">
       <div class="row justify-content-center align-items-center ">
         <div class="col-sm-6">
-          <a href="index.html"><img src="photo/Our icon.png" alt="" width="90%"></a>
+          <a href="C:\Users\hanal\.vscode\web_tech11\ass\bakery.html"><img src="C:\Users\hanal\.vscode\web_tech11\bakery_img\Our icon.png" alt="" width="90%"></a>
         </div>
       </div>
     </div>
@@ -49,7 +46,7 @@
   <!-- form -->
     <div class="container border mt-5 text-center" style="background-color: #F7F4ED; width:50% ">
       <h2 class="mt-2">Login</h2>
-      <form action="/action_page.php">
+      <form action="/action_page.php" onsubmit="validateForm(); return false;">
         <div class="form-group mt-4">
           <label for="email">Email:</label>
           <input type="email" class="form-control text-center" id="email" placeholder="Enter email" name="email">
@@ -58,9 +55,9 @@
           <label for="pwd">Password:</label>
           <input type="password" class="form-control  text-center" id="pwd" placeholder="Enter password" name="pwd">
         </div>
-        <a href="index.html" class="btn btn-primary mt-4">Submit</a>
+        <button class="btn btn-primary mt-4" onclick="validateForm();">Submit</button>
         <ul class="pager">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="C:\Users\hanal\.vscode\web_tech11\ass\bakery.html">Home</a></li>
         </ul>
       </form>
     </div>
@@ -68,3 +65,5 @@
    
   </body>
 </html>
+
+
