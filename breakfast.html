@@ -158,7 +158,9 @@
                 <!-- Steps -->
                 <div class="col-sm-1 "></div>
                 <div class="col-sm-8 ">
-                    <h3>Directions</h3>
+                    <h3 style="display: inline-block">Directions</h3>
+                    <div class="btn btn-dark ml-2" style="float: right;" onclick="startTimerPrompt()">Set a Timer</div>
+          
                     <h5>Step 1</h5>
                     <p style="line-height: 40px;">Mix dry ingredients (flour, sugar, baking powder, baking soda, salt)
                         in a large bowl.
@@ -172,7 +174,7 @@
                         Pour 1/4 cup portions of batter onto the skillet and cook <strong onclick="startTimer(2000);" style=" color:rgb(244, 42, 42); display: inline-block;"> 2 min.</strong></p>
                  
                        
-                    <h5 id="timer"></h5>
+                        <h5 id="timer"></h5>
 
                 </div>
             </div>
@@ -252,34 +254,8 @@
         </div>
 
 
-        <!-- CAKE -->
-        <!-- <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-4" style="background-color: #F7F4ED;">
-                        <a href="cake.html">
-                            <video autoplay loop muted class="w-100 h-90">
-                                <source src="video/cake.mp4" type="video/mp4">
-                            </video>
-                            
-                        </a>
-                        <h3 style="text-align: center;">CAKE</h3>
-                    </div>
-                    <div class="col-sm-2"></div> -->
 
-        <!-- CUPCAKE -->
 
-        <!-- <div class="col-sm-4" style="background-color: #F7F4ED;">
-                        <a href="breakfast.html">
-                            <video autoplay loop muted class="w-100 h-90">
-                                <source src="video/cupcake" type="video/mp4">
-                            </video>     
-                        </a>
-                        <h3 style="text-align: center;">CUPCAKE</h3>
-                    </div>
-                    <div class="col-sm-1"></div>
-                </div>
-            </div> -->
 
         <!-- Conclusion -->
         <hr style="border: 1.5px solid#587493">
@@ -296,7 +272,7 @@
                 </div>
             </div>
         
- <p id=" c2"></p>
+ <p id="c2"></p>
                     <hr style="border: 1.5px solid#587493">
                     <!-- accordion -->
                     <div class="content">
@@ -396,8 +372,7 @@
                                     </div>
                                 </footer>
 
-                                <script
-                                    src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
+                                <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.0.9/dist/js/splide.min.js"></script>
                                 <script src="index.js"></script>
 </body>
 
